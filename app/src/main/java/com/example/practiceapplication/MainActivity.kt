@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                 },
                 Response.ErrorListener { textView.text = "That didn't work!" })
 
+// Add the request to the RequsetQueue.
         queue.add(stringRequest)
     }
 }
