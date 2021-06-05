@@ -1,12 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
+    dataBinding{
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.example.practiceapplication"
         minSdkVersion 24
@@ -16,7 +22,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
